@@ -1,3 +1,3 @@
 #!/bin/bash
-read txt
-echo $txt | rev
+read input
+echo $input | awk { for (i=length; i>0; i--) printf("%s", substr($0,i,1)); printf("\n"); }
