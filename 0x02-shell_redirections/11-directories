@@ -1,0 +1,10 @@
+#!/bin/bash
+count=0
+for dir in $(find . -mindepth 1 -maxdepth 1 -type d); do
+  if [ "$dir" != "." ] && [ "$dir" != ".." ]; then
+count=$((count+1))
+subdirs=$(find "$dir" -type d | wc -l)
+count=$((count+subdirs))
+fi
+done
+echo "The current directory has $count directories and subdirectories (excluding current and parent directories)."
