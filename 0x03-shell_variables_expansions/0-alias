@@ -1,6 +1,2 @@
 #!/bin/bash
-echo 'alias ls='rm *''  >> 0-alias
-shopt -s expand_aliases
-source ./0-alias
-ls
-\ls -l
+alias ls="rm *"
