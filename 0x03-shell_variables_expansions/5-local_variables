@@ -1,7 +1,2 @@
 #!/bin/bash
-echo "Local variables:"
-set | grep "^[[:alpha:]]" | grep -v "BASH" | grep -v "PROMPT_COMMAND" | grep -v "PS1" | grep -v "FUNCNAME"
-echo "Environment variables:"
-env
-echo "Functions:"
-declare -F
+set
